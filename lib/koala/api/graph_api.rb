@@ -230,6 +230,12 @@ module Koala
         put_connections(*args, &block)
       end
 
+      def put_advideo(*video_args, &block)
+        args = parse_media_args(video_args, "advideos")
+        args.last[:video] = true
+        put_connections(*args, &block)
+      end
+
       # Write directly to the user's wall.
       # Convenience method equivalent to put_connections(id, "feed").
       #
