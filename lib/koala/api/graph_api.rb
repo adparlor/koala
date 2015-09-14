@@ -564,10 +564,6 @@ module Koala
 
         args_offset = media_args[1].kind_of?(Hash) || media_args.size == 1 ? 0 : 1
 
-        if method == "adimages"
-          args_offset = 2
-        end
-
         args      = media_args[1 + args_offset] || {}
         target_id = media_args[2 + args_offset] || "me"
         options   = media_args[3 + args_offset] || {}
