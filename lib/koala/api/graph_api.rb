@@ -226,7 +226,7 @@ module Koala
         # args = parse_media_args(image_args, "adimages")
         # args.last[:image] = true
         # put_connections(*args, &block)
-        put_connections(*parse_media_args(picture_args, "adimages"), &block)
+        put_connections(*parse_media_args(image_args, "adimages"), &block)
       end
 
       # Upload a video.  Functions exactly the same as put_picture.
